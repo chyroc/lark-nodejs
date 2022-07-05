@@ -1,5 +1,9 @@
+export interface RequestBody {
+  getBody: ()=>any,
+}
+
 // RawRequestReq is the parameter that composes the lark sdk request
-export interface RawRequestReq<T> {
+export interface RawRequestReq<T extends RequestBody> {
   scope: string        // api domain, such as Auth, Chat, Mail
   api: string        // api name, as in CreateMailGroup
   method: string        // http request method, such as GET, POST
@@ -13,11 +17,13 @@ export interface RawRequestReq<T> {
   method_option?: any// *MethodOption // method option, such as userAccessToken
 }
 
-
 export interface Response {
-  method: string   // request method
-  url: string // request url
-  request_id: string // request id, if you got some error and oncall lark/feishu team, please with this request id
+  // request method
+  method: string
+  // request url
+  url: string
+  // request id, if you got some error and oncall lark/feishu team, please with this request id
+  request_id: string
   status_code: number   // http response status code
   header: any // http response header
   content_length: number   // http response content length

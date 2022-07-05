@@ -13,16 +13,16 @@ export default class BotService {
     data: Bot.GetBotInfoResp,
     response: Response,
   }> {
-    const req: RawRequestReq<Bot.GetBotInfoReq> = {
+    const req: RawRequestReq<GetBotInfoReq> = {
       scope: 'Bot',
       api: 'GetBotInfo',
       method: 'GET',
       url: this.cli.openBaseURL + '/open-apis/bot/v3/info',
-      body: request,
+      body: new GetBotInfoReq(),
       method_option: false,
       need_tenant_accessToken: true
     }
-    return this.cli.RawRequest<RawRequestReq<Bot.GetBotInfoReq>, Bot.GetBotInfoResp>(req)
+    return this.cli.RawRequest<GetBotInfoReq, Bot.GetBotInfoResp>(req)
   }
 }
 
@@ -33,5 +33,14 @@ export declare namespace Bot {
   export interface GetBotInfoResp {
     activate_status: number
     app_name: string
+    avatar_url: string
+    ip_white_list: string[]
+    open_id: string
+  }
+}
+
+class GetBotInfoReq {
+  getBody() {
+    return {}
   }
 }
