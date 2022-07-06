@@ -1,11 +1,9 @@
-import { Lark } from '../src'
+import { appAllPermission } from './help.test'
 
 describe('auth.test', () => {
-  const appID = process.env.LARK_APP_ALL_PERMISSION_APP_ID
-  const appSecret = process.env.LARK_APP_ALL_PERMISSION_APP_SECRET
+  const cli = appAllPermission.ins()
 
   it('auth.getTenantAccessToken', async () => {
-    const cli = new Lark({ appID, appSecret })
     const resp = await cli.auth.getTenantAccessToken()
     expect(resp.data.expire).toBeDefined()
     expect(resp.data.token).toBeDefined()
@@ -13,7 +11,6 @@ describe('auth.test', () => {
   })
 
   it('auth.getAppAccessToken', async () => {
-    const cli = new Lark({ appID, appSecret })
     const resp = await cli.auth.getAppAccessToken()
     expect(resp.data.expire).toBeDefined()
     expect(resp.data.token).toBeDefined()

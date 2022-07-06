@@ -1,14 +1,10 @@
-import { Lark } from '../src'
+import { appAllPermission } from './help.test'
 
 describe('bot.test', () => {
-  const appID = process.env.LARK_APP_ALL_PERMISSION_APP_ID
-  const appSecret = process.env.LARK_APP_ALL_PERMISSION_APP_SECRET
+  const cli = appAllPermission.ins()
 
   it('bot.getBotInfo', async () => {
-    const cli = new Lark({ appID, appSecret })
     const resp = await cli.bot.getBotInfo({})
-    expect(resp.data.app_name).toBeDefined()
-    // expect(resp.data.token).toBeDefined()
-    console.log('bot.getBotInfo', resp)
+    expect(resp.data.app_name).toEqual('lark-sdk')
   })
 })

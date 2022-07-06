@@ -2,5 +2,13 @@
   "extends": [
     "tslint-config-standard",
     "tslint-config-prettier"
-  ]
+  ],
+  "rules": {
+    "variable-name": {
+      "options": [
+        "allow-snake-case"
+      ]
+    },
+    "class-name": false
+  }
 }

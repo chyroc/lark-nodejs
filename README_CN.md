@@ -4,40 +4,40 @@
 [![test status](https://github.com/chyroc/lark-nodejs/actions/workflows/test.yml/badge.svg)](https://github.com/chyroc/lark-nodejs/actions)
 [![Apache-2.0 license](https://img.shields.io/badge/License-Apache%202.0-brightgreen.svg)](https://opensource.org/licenses/Apache-2.0)
 
-[中文版 README](./README_CN.md)
+[English README](./README.md)
 
-Feishu/Lark Open API NodeJS Sdk, Support ALL Open API and Event Callback.
+飞书/Lark 的开放接口 NodeJS SDK，支持所有的开放接口，和事件回调。
 
-Supported Features
+支持的功能
 
-- Many APIs and events
-- Support mock to support test
-- Support isv and self-built apps
-- Support Logger interface
-- Support UserAccessToken
-- Use code generation to create, api and document update timely
+- 非常多的接口和事件
+- 支持 Mock 以支持测试
+- 支持 ISV 和自建 App
+- 支持 Logger 接口
+- 支持 UserAccessToken
+- 使用代码生成创建，接口和文档更新及时
 
-## Chat
+## 讨论
 
-Click [Lark Chat Link](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=985n4cf0-70d7-444c-909f-98885892c233) to discuss.
+点击 [飞书群聊](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=985n4cf0-70d7-444c-909f-98885892c233) 一起讨论。
 
-## Install
+## 安装
 
 ```shell
 npm i @chyroc/lark
 ```
 
-## Docs
+## 文档
 
-https://godoc.org/github.com/chyroc/lark-nodejs
+https://godoc.org/github.com/chyroc/lark
 
-## Support APIs
+## 支持的接口
 
-API Count: 610, Event Count: 91
+API 总数: 610, 事件总数: 91
 
 <details>
   <summary>
-    Click This to See ALL
+    点击查看所有接口和事件
   </summary>
 
 - ACS
@@ -777,6 +777,6 @@ API Count: 610, Event Count: 91
 
 </details>
 
-## Usage
+## 使用
 
 
