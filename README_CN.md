@@ -6,6 +6,8 @@
 
 [English README](./README.md)
 
+类似的 Go 语言实现: https://github.com/chyroc/lark
+
 飞书/Lark 的开放接口 NodeJS SDK，支持所有的开放接口，和事件回调。
 
 支持的功能

@@ -1,6 +1,6 @@
 {
   "name": "@chyroc/lark",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "keywords": [],
   "main": "dist/lark.umd.js",

@@ -6,6 +6,8 @@
 
 [中文版 README](./README_CN.md)
 
+Similar Go implementation: https://github.com/chyroc/lark
+
 Feishu/Lark Open API NodeJS Sdk, Support ALL Open API and Event Callback.
 
 Supported Features
