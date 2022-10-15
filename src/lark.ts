@@ -172,7 +172,10 @@ export class Lark {
     console.log(`[DEBUG] ${req.scope}#${req.api} ${method} ${url} req`, req)
 
     const headers = {} as { [key: string]: string }
-    if (req.need_tenant_accessToken) {
+
+    if (req.need_user_accessToken && !!this.verificationToken) {
+      headers['Authorization'] = `Bearer ${this.verificationToken}`
+    } else if (req.need_tenant_accessToken) {
       const { data } = await this.auth.getTenantAccessToken()
       headers['Authorization'] = `Bearer ${data.token}`
     } else if (req.need_app_accessToken) {
